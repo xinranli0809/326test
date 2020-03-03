@@ -116,6 +116,7 @@ websocket.onclose = function(evt)
     {
         doConnect();
     
+    
     };
     
 }
