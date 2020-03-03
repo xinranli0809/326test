@@ -1,0 +1,78 @@
+#title
+{
+    color: #622A84;
+    font-family: "Spartan";
+
+}
+
+#title2
+{
+    color: #622A84;
+    font-family: "Spartan";
+}
+
+
+#names
+{
+    color: #622A84;
+    font-family: "Spartan";
+}
+
+#nav
+{
+    
+    background-color: #622A84;
+    overflow: hidden;
+    font-family:"Spartan";
+    padding: 9px 30px;
+}
+
+#nav a {
+
+    color: white;
+    padding: 10px 30px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+#nav a:hover {
+    background-color: white;
+    color: 	#622A84;
+}
+
+#introduction
+{
+    color: #622A84;
+    font-family: "Spartan";
+}
+
+#button 
+{
+    background-color: #622A84;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-family:"Spartan";
+    
+}
+#button:hover
+{
+    background-color: #a86de3!important;
+}
+
+#msg
+{
+    font-family: "Spartan";
+}
+
+#image
+{
+    font-family: "Spartan";
+}
+
+label
+{
+    color: #622A84;
+    font-family: "Spartan";
+}
