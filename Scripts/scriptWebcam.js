@@ -1,6 +1,8 @@
 var websocket = null; // websocket instance
 var localhost = "192.168.1.65";
 var b = document.querySelector('#button');
+var zentri = document.getElementById("zentri");
+var nav = document.getElementById("nav");
 var buttonClicked = false;
 
 
@@ -102,10 +104,47 @@ function onError(evt) { // when an error occurs
 
 b.addEventListener('click',depends);
 
+
+
+zentri.addEventListener("mouseenter", orange);
+zentri.addEventListener("mouseleave",purple);
+//nav.addEventListener("mouseenter", test);
+//nav.addEventListener("mouseleave",purpleNav);
+//var bool = 0;
+
+function orange(evt)
+{
+//    evt.target.style.color = "orange";   
+    evt.target.style.backgroundColor = "#EF5F22";
+}
+function purple(evt)
+{
+    evt.target.style.backgroundColor = '#622A84';
+//    nav.style.backgroundColor = "#622A84";
+}
+
+//function test(evt)
+//{
+//    if (bool = 1)
+//        {
+//            evt.target.style.backgroundColor = "orange";
+//        }
+//    bool = 0;
+//}
+//function purpleNav(evt)
+//{
+//    evt.target.style.backgroundColor = '#622A84';
+//}
+//setTimeout(function() {
+//    event.target.style.color = "";
+//  }, 500);
+//}, false);
+
 function depends()
 {
     b.disabled = true;
     buttonClicked = true;
+//    document.body.style.backgroundColor='rgb(98,42,132)';
     websocket = new WebSocket("ws://" + localhost + "/stream");
     websocket.onopen = function(evt)
     {
@@ -113,8 +152,9 @@ function depends()
     };
 websocket.onclose = function(evt)
     {
-        doConnect();
+        doConnect();    
     };
+    
 }
 
 
@@ -126,4 +166,4 @@ websocket.onclose = function(evt)
   }
 
 // Open Websocket as soon as page loads
-//window.addEventListener("load", init, false);
+window.addEventListener("load", init, false);
